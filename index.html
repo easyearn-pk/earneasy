@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>EarnEasy — Ghar Baithe Halal Kamayi | $90/Month</title>
+<meta name="description" content="Ghar baithe online kaam karo aur $90 per month kamao. Ads dekhna, videos, surveys, data entry, AI tasks aur bohot kuch — bilkul free, bilkul halal.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#059669;--green2:#10B981;--green3:#D1FAE5;
+  --gold:#F59E0B;--gold2:#FEF3C7;
+  --blue:#2563EB;--blue2:#EFF6FF;
+  --purple:#7C3AED;--purple2:#EDE9FE;
+  --red:#EF4444;--red2:#FEE2E2;
+  --text:#111827;--text2:#374151;--text3:#6B7280;
+  --bg:#F9FAFB;--white:#FFFFFF;--border:#E5E7EB;
+  --shadow:0 1px 3px rgba(0,0,0,0.1),0 4px 16px rgba(0,0,0,0.06);
+  --shadow2:0 4px 24px rgba(5,150,105,0.15);
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-thumb{background:#D1D1D9;border-radius:3px}
+
+/* AUTH */
+#authWall{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:1rem}
+.auth-box{background:#fff;border-radius:20px;padding:2rem;width:100%;max-width:420px;box-shadow:0 20px 60px rgba(0,0,0,0.2)}
+.auth-logo{display:flex;align-items:center;gap:0.5rem;justify-content:center;margin-bottom:1.25rem}
+.auth-logo .logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--green),var(--gold));border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem}
+.auth-logo span{font-size:1.3rem;font-weight:800;color:var(--text)}
+.auth-box h2{font-size:1.25rem;font-weight:700;text-align:center;margin-bottom:0.25rem}
+.auth-box .usub{font-size:0.82rem;color:var(--text3);text-align:center;margin-bottom:1.5rem;line-height:1.5}
+.auth-tabs{display:flex;background:var(--bg);border-radius:10px;padding:3px;margin-bottom:1.25rem}
+.auth-tab{flex:1;text-align:center;padding:0.5rem;font-size:0.82rem;font-weight:600;border-radius:8px;cursor:pointer;transition:all 0.2s;border:none;background:transparent;font-family:'Inter',sans-serif;color:var(--text3)}
+.auth-tab.on{background:#fff;color:var(--green);box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+.auth-input{width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.72rem 1rem;font-family:'Inter',sans-serif;font-size:0.88rem;outline:none;color:var(--text);margin-bottom:0.5rem;transition:border-color 0.2s}
+.auth-input:focus{border-color:var(--green)}
+.auth-btn{width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer;margin-bottom:0.75rem;transition:all 0.2s}
+.auth-btn:hover{opacity:0.9;transform:translateY(-1px)}
+.google-btn{display:flex;align-items:center;justify-content:center;gap:0.65rem;width:100%;background:#fff;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;font-family:'Inter',sans-serif;font-size:0.85rem;font-weight:600;color:var(--text);cursor:pointer;margin-bottom:0.75rem;transition:all 0.2s}
+.google-btn:hover{border-color:var(--blue);box-shadow:0 2px 8px rgba(37,99,235,0.15)}
+.auth-note{font-size:0.7rem;color:var(--text3);text-align:center;line-height:1.5}
+.divider{display:flex;align-items:center;gap:0.75rem;margin:0.6rem 0;color:var(--text3);font-size:0.75rem}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:800;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{display:flex;align-items:center;gap:0.5rem;text-decoration:none}
+.logo-icon{width:34px;height:34px;background:linear-gradient(135deg,var(--green),var(--gold));border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.logo-text{font-size:1.15rem;font-weight:800;color:var(--text);letter-spacing:-0.02em}
+.logo-text span{color:var(--green)}
+.nav-links{display:flex;gap:0.2rem}
+.nl{color:var(--text2);font-size:0.83rem;font-weight:500;border:none;background:transparent;padding:0.38rem 0.85rem;border-radius:8px;cursor:pointer;transition:all 0.15s;font-family:'Inter',sans-serif}
+.nl:hover{background:var(--bg);color:var(--text)}
+.nav-right{display:flex;align-items:center;gap:0.65rem}
+.earn-badge{background:var(--green3);color:var(--green);border:1px solid rgba(5,150,105,0.2);border-radius:100px;padding:0.28rem 0.75rem;font-size:0.72rem;font-weight:700}
+.user-chip{display:none;align-items:center;gap:0.45rem;background:#fff;border:1px solid var(--border);border-radius:100px;padding:0.28rem 0.75rem 0.28rem 0.28rem;cursor:pointer;box-shadow:var(--shadow)}
+.user-av{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--gold));display:flex;align-items:center;justify-content:center;font-size:0.7rem;font-weight:700;color:#fff}
+.user-nm{font-size:0.78rem;font-weight:600}
+.bal-chip{background:var(--green3);color:var(--green);border:1px solid rgba(5,150,105,0.2);border-radius:100px;padding:0.22rem 0.65rem;font-size:0.72rem;font-weight:700;display:none}
+.signout{display:none;font-size:0.72rem;color:var(--text3);background:transparent;border:1px solid var(--border);border-radius:8px;padding:0.28rem 0.65rem;cursor:pointer;font-family:'Inter',sans-serif}
+
+/* HERO */
+.hero{padding:5rem 2rem 4rem;text-align:center;background:linear-gradient(180deg,#ECFDF5 0%,#F9FAFB 100%);border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23059669' fill-opacity='0.04'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.hero-badge{display:inline-flex;align-items:center;gap:0.45rem;background:#fff;border:1.5px solid rgba(5,150,105,0.25);border-radius:100px;padding:0.4rem 1rem;font-size:0.72rem;font-weight:700;color:var(--green);margin-bottom:1.5rem;box-shadow:0 2px 8px rgba(5,150,105,0.12)}
+.bdot{width:7px;height:7px;background:var(--green);border-radius:50%;animation:blink 2s infinite}
+@keyframes blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.7)}}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--text);line-height:1.1;margin-bottom:1rem}
+.hero h1 .green{color:var(--green)}
+.hero h1 .gold{color:var(--gold)}
+.urdu-line{font-family:'Noto Nastaliq Urdu',serif;font-size:clamp(1.1rem,2.5vw,1.6rem);color:var(--text2);direction:rtl;margin-bottom:1rem;line-height:2}
+.hero-sub{font-size:1rem;color:var(--text2);max-width:560px;margin:0 auto 2rem;line-height:1.75;font-weight:300}
+.hero-btns{display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.btn-primary{background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.9rem 2rem;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:700;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 14px rgba(5,150,105,0.3)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(5,150,105,0.4)}
+.btn-secondary{background:#fff;border:1.5px solid var(--border);color:var(--text);padding:0.9rem 2rem;border-radius:12px;font-family:'Inter',sans-serif;font-size:0.95rem;font-weight:600;cursor:pointer;transition:all 0.2s}
+.btn-secondary:hover{border-color:var(--green);color:var(--green)}
+
+/* EARNING STATS */
+.earn-stats{display:flex;gap:0;background:#fff;border:1.5px solid rgba(5,150,105,0.2);border-radius:16px;overflow:hidden;max-width:700px;margin:0 auto;box-shadow:var(--shadow2)}
+.estat{flex:1;padding:1.25rem;text-align:center;border-right:1px solid var(--border)}
+.estat:last-child{border-right:none}
+.estat-v{font-size:1.7rem;font-weight:800;letter-spacing:-0.03em;line-height:1;color:var(--green)}
+.estat-k{font-size:0.65rem;color:var(--text3);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;margin-top:0.25rem}
+
+/* HOW IT WORKS */
+.how{padding:5rem 2rem;background:#fff;border-bottom:1px solid var(--border)}
+.sec-label{font-size:0.65rem;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);text-align:center;margin-bottom:0.5rem}
+.sec-title{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;letter-spacing:-0.02em;text-align:center;margin-bottom:0.5rem}
+.sec-sub{color:var(--text3);font-size:0.88rem;text-align:center;margin-bottom:3rem;font-weight:300}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:900px;margin:0 auto}
+.how-card{text-align:center;padding:2rem 1.5rem;background:var(--bg);border-radius:16px;border:1px solid var(--border)}
+.how-num{width:44px;height:44px;background:linear-gradient(135deg,var(--green),var(--green2));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:800;color:#fff;margin:0 auto 1rem}
+.how-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.4rem}
+.how-card p{font-size:0.78rem;color:var(--text3);line-height:1.65;font-weight:300}
+
+/* TASKS SECTION */
+.tasks-section{padding:5rem 2rem;background:var(--bg)}
+.tasks-inner{max-width:1100px;margin:0 auto}
+.tasks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+.task-card{background:#fff;border:1.5px solid var(--border);border-radius:16px;padding:1.5rem;transition:all 0.25s;cursor:pointer;position:relative;overflow:hidden}
+.task-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
+.task-card.green::before{background:linear-gradient(90deg,var(--green),var(--green2))}
+.task-card.gold::before{background:linear-gradient(90deg,var(--gold),#FCD34D)}
+.task-card.blue::before{background:linear-gradient(90deg,var(--blue),#60A5FA)}
+.task-card.purple::before{background:linear-gradient(90deg,var(--purple),#A78BFA)}
+.task-card.red::before{background:linear-gradient(90deg,var(--red),#F87171)}
+.task-card.teal::before{background:linear-gradient(90deg,#0D9488,#2DD4BF)}
+.task-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.task-icon{font-size:2.2rem;margin-bottom:0.85rem;display:block}
+.task-earn{display:inline-flex;align-items:center;gap:0.35rem;background:var(--green3);color:var(--green);border-radius:100px;padding:0.2rem 0.65rem;font-size:0.7rem;font-weight:700;margin-bottom:0.75rem}
+.task-card h3{font-size:0.95rem;font-weight:700;margin-bottom:0.4rem;color:var(--text)}
+.task-card p{font-size:0.78rem;color:var(--text3);line-height:1.65;font-weight:300;margin-bottom:1rem}
+.task-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0.4rem}
+.task-diff{font-size:0.65rem;font-weight:600;padding:0.18rem 0.55rem;border-radius:100px;letter-spacing:0.05em}
+.diff-easy{background:#D1FAE5;color:#065F46}
+.diff-med{background:#FEF3C7;color:#92400E}
+.task-time{font-size:0.68rem;color:var(--text3);display:flex;align-items:center;gap:0.25rem}
+.start-btn{width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.65rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;cursor:pointer;transition:all 0.2s;margin-top:0.75rem}
+.start-btn:hover{opacity:0.9;transform:translateY(-1px)}
+
+/* DASHBOARD */
+.dashboard{padding:5rem 2rem;background:#fff;border-top:1px solid var(--border)}
+.dash-inner{max-width:1100px;margin:0 auto}
+.dash-grid{display:grid;grid-template-columns:280px 1fr;gap:1.5rem;margin-top:2rem}
+.dash-sidebar{display:flex;flex-direction:column;gap:1rem}
+.dash-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.25rem}
+.dash-card h4{font-size:0.78rem;font-weight:600;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:1rem}
+.balance-big{font-size:2.5rem;font-weight:800;color:var(--green);letter-spacing:-0.04em;line-height:1}
+.balance-sub{font-size:0.78rem;color:var(--text3);margin-top:0.25rem}
+.progress-item{margin-bottom:1rem}
+.progress-label{display:flex;justify-content:space-between;font-size:0.75rem;font-weight:500;margin-bottom:0.4rem}
+.progress-bar{background:var(--border);border-radius:100px;height:6px;overflow:hidden}
+.progress-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--green),var(--green2));transition:width 0.5s ease}
+.dash-main{display:flex;flex-direction:column;gap:1rem}
+.active-task{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:1.25rem;display:flex;align-items:center;gap:1rem;transition:all 0.2s;cursor:pointer}
+.active-task:hover{border-color:var(--green);box-shadow:0 2px 12px rgba(5,150,105,0.1)}
+.at-icon{font-size:1.75rem;flex-shrink:0}
+.at-info{flex:1}
+.at-title{font-size:0.88rem;font-weight:600;margin-bottom:0.2rem}
+.at-desc{font-size:0.75rem;color:var(--text3);font-weight:300}
+.at-earn{font-size:0.78rem;font-weight:700;color:var(--green);white-space:nowrap}
+.at-btn{background:var(--green);border:none;color:#fff;padding:0.45rem 1rem;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;cursor:pointer;white-space:nowrap;transition:all 0.2s}
+.at-btn:hover{background:var(--green2)}
+
+/* TASK MODAL */
+#taskModal{display:none;position:fixed;inset:0;z-index:998;background:rgba(0,0,0,0.5);backdrop-filter:blur(8px);align-items:center;justify-content:center;padding:1rem}
+#taskModal.open{display:flex}
+.tmodal{background:#fff;border-radius:20px;padding:2rem;width:100%;max-width:520px;max-height:90vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,0.15)}
+.tmodal h3{font-size:1.15rem;font-weight:700;margin-bottom:0.25rem}
+.tmodal .tsub{font-size:0.8rem;color:var(--text3);margin-bottom:1.5rem}
+
+/* VIDEO TASK */
+.video-box{background:#000;border-radius:12px;overflow:hidden;position:relative;margin-bottom:1rem;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center}
+.video-placeholder{text-align:center;color:rgba(255,255,255,0.6)}
+.video-placeholder .vi{font-size:3rem;margin-bottom:0.5rem;display:block}
+.watch-timer{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1rem;text-align:center;margin-bottom:1rem}
+.timer-big{font-size:2rem;font-weight:800;color:var(--text);letter-spacing:-0.03em}
+.timer-sub{font-size:0.72rem;color:var(--text3)}
+.progress-bar2{background:var(--border);border-radius:100px;height:8px;overflow:hidden;margin-bottom:1rem}
+.progress-fill2{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--green),var(--green2));width:0;transition:width 0.5s linear}
+
+/* SURVEY */
+.survey-q{font-size:0.9rem;font-weight:600;margin-bottom:0.75rem;color:var(--text)}
+.survey-opts{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+.survey-opt{background:var(--bg);border:1.5px solid var(--border);border-radius:10px;padding:0.65rem 1rem;font-size:0.85rem;cursor:pointer;transition:all 0.2s;text-align:left;font-family:'Inter',sans-serif;font-weight:400;color:var(--text)}
+.survey-opt:hover,.survey-opt.on{border-color:var(--green);background:var(--green3);color:var(--green);font-weight:500}
+
+/* REFERRAL */
+.ref-box{background:linear-gradient(135deg,var(--green3),#FEF3C7);border:1px solid rgba(5,150,105,0.2);border-radius:16px;padding:2rem;text-align:center;margin-bottom:1.5rem}
+.ref-code{font-size:1.5rem;font-weight:800;letter-spacing:0.1em;color:var(--text);background:#fff;border:2px dashed var(--green);border-radius:10px;padding:0.75rem 2rem;display:inline-block;margin:0.75rem 0}
+
+/* WITHDRAW */
+.withdraw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.75rem;margin-bottom:1rem}
+.w-method{border:1.5px solid var(--border);border-radius:12px;padding:1rem;text-align:center;cursor:pointer;transition:all 0.2s}
+.w-method:hover,.w-method.on{border-color:var(--green);background:var(--green3)}
+.w-icon{font-size:1.5rem;margin-bottom:0.4rem;display:block}
+.w-name{font-size:0.75rem;font-weight:600}
+
+/* TESTIMONIALS */
+.testimonials{padding:5rem 2rem;background:var(--bg);border-top:1px solid var(--border)}
+.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;max-width:1000px;margin:2.5rem auto 0}
+.test-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:1.5rem}
+.test-top{display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem}
+.test-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--green),var(--gold));display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;color:#fff;flex-shrink:0}
+.test-name{font-size:0.85rem;font-weight:700}
+.test-loc{font-size:0.72rem;color:var(--text3)}
+.test-earn{font-size:0.72rem;font-weight:700;color:var(--green);background:var(--green3);padding:0.15rem 0.5rem;border-radius:100px;margin-left:auto}
+.test-card p{font-size:0.8rem;color:var(--text2);line-height:1.65;font-weight:300;font-style:italic}
+.stars{color:var(--gold);font-size:0.85rem;margin-top:0.65rem}
+
+/* FAQ */
+.faq{padding:5rem 2rem;background:#fff;border-top:1px solid var(--border)}
+.faq-inner{max-width:700px;margin:0 auto}
+.faq-item{border:1px solid var(--border);border-radius:12px;margin-bottom:0.75rem;overflow:hidden;cursor:pointer}
+.faq-q{padding:1rem 1.25rem;font-size:0.88rem;font-weight:600;display:flex;align-items:center;justify-content:space-between;transition:background 0.2s}
+.faq-q:hover{background:var(--bg)}
+.faq-a{display:none;padding:0 1.25rem 1rem;font-size:0.82rem;color:var(--text3);line-height:1.7;font-weight:300}
+.faq-item.open .faq-a{display:block}
+.faq-item.open .faq-q{background:var(--green3);color:var(--green)}
+.faq-arrow{transition:transform 0.2s;font-size:0.75rem}
+.faq-item.open .faq-arrow{transform:rotate(180deg)}
+
+/* CTA */
+.cta{padding:5rem 2rem;background:linear-gradient(135deg,var(--green),#065F46);text-align:center}
+.cta h2{font-size:clamp(1.5rem,3.5vw,2.5rem);font-weight:800;color:#fff;margin-bottom:0.75rem;letter-spacing:-0.02em}
+.cta p{font-size:1rem;color:rgba(255,255,255,0.8);margin-bottom:2rem;font-weight:300}
+.cta .urdu{font-family:'Noto Nastaliq Urdu',serif;font-size:1.1rem;direction:rtl;color:rgba(255,255,255,0.9);margin-bottom:2rem;display:block;line-height:2}
+.cta-btn{background:#fff;border:none;color:var(--green);padding:1rem 2.5rem;border-radius:12px;font-family:'Inter',sans-serif;font-size:1rem;font-weight:800;cursor:pointer;transition:all 0.2s;box-shadow:0 4px 14px rgba(0,0,0,0.2)}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,0.3)}
+
+/* FOOTER */
+footer{background:#111827;padding:3rem 2rem;color:rgba(255,255,255,0.6)}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem}
+.footer-logo{display:flex;align-items:center;gap:0.5rem;margin-bottom:1rem}
+.footer-logo .li{width:32px;height:32px;background:linear-gradient(135deg,var(--green),var(--gold));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+.footer-logo span{font-size:1rem;font-weight:700;color:#fff}
+footer p{font-size:0.78rem;line-height:1.7}
+.footer-col h4{font-size:0.78rem;font-weight:700;color:#fff;margin-bottom:0.75rem;letter-spacing:0.05em;text-transform:uppercase}
+.footer-col a{display:block;font-size:0.78rem;color:rgba(255,255,255,0.5);text-decoration:none;margin-bottom:0.4rem;transition:color 0.2s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{max-width:1100px;margin:2rem auto 0;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem}
+.footer-bottom p{font-size:0.72rem}
+
+/* TOAST */
+.toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(20px);background:var(--text);color:#fff;padding:0.6rem 1.25rem;font-size:0.8rem;font-weight:500;z-index:9999;opacity:0;transition:all 0.3s;white-space:nowrap;pointer-events:none;border-radius:100px}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast.ok{background:var(--green)}
+.toast.err{background:var(--red)}
+
+/* DAILY LIMIT BAR */
+#dailyLimitBar{
+  background:linear-gradient(135deg,#ECFDF5,#FEF3C7);
+  border-bottom:2px solid var(--green);
+  padding:0.6rem 2rem;
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:0.75rem;
+  position:sticky;top:60px;z-index:700;
+}
+.dlb-left{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.dlb-title{font-size:0.72rem;font-weight:700;color:var(--green);letter-spacing:0.05em;white-space:nowrap}
+.dlb-track{width:160px;height:8px;background:rgba(5,150,105,0.15);border-radius:100px;overflow:hidden}
+.dlb-fill{height:100%;border-radius:100px;background:linear-gradient(90deg,var(--green),var(--gold));transition:width 0.5s ease}
+.dlb-fill.near{background:linear-gradient(90deg,var(--gold),#F97316)}
+.dlb-fill.full{background:linear-gradient(90deg,var(--red),#F97316)}
+.dlb-amt{font-size:0.8rem;font-weight:800;color:var(--text);white-space:nowrap}
+.dlb-amt span{color:var(--green)}
+.dlb-right{display:flex;align-items:center;gap:0.65rem}
+.dlb-aff-btn{
+  background:linear-gradient(135deg,var(--gold),#F97316);
+  border:none;color:#000;
+  padding:0.38rem 1rem;border-radius:100px;
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;
+  cursor:pointer;white-space:nowrap;transition:all 0.2s;
+  box-shadow:0 2px 8px rgba(245,158,11,0.3);
+}
+.dlb-aff-btn:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(245,158,11,0.5)}
+
+/* LIMIT REACHED MODAL */
+#limitModal{
+  display:none;position:fixed;inset:0;z-index:9990;
+  background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);
+  align-items:center;justify-content:center;padding:1rem;
+}
+#limitModal.show{display:flex}
+.lm-box{
+  background:#fff;border-radius:20px;padding:2rem;
+  max-width:460px;width:100%;text-align:center;
+  box-shadow:0 20px 60px rgba(0,0,0,0.2);
+  animation:slideUp 0.3s ease both;
+}
+@keyframes slideUp{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.lm-icon{font-size:3.5rem;margin-bottom:0.5rem}
+.lm-title{font-size:1.35rem;font-weight:800;color:var(--text);margin-bottom:0.5rem;letter-spacing:-0.02em}
+.lm-sub{font-size:0.82rem;color:var(--text3);line-height:1.7;margin-bottom:1.5rem}
+.lm-earned-box{
+  background:linear-gradient(135deg,var(--green3),#FEF3C7);
+  border:1px solid rgba(5,150,105,0.2);
+  border-radius:14px;padding:1.25rem;margin-bottom:1.5rem;
+}
+.lm-earned-v{font-size:2.5rem;font-weight:800;color:var(--green);letter-spacing:-0.04em;line-height:1}
+.lm-earned-k{font-size:0.68rem;color:var(--text3);font-weight:600;text-transform:uppercase;letter-spacing:0.06em;margin-top:0.25rem}
+.lm-aff-section{
+  background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(249,115,22,0.05));
+  border:1.5px solid rgba(245,158,11,0.3);
+  border-radius:14px;padding:1.25rem;margin-bottom:1rem;text-align:left;
+}
+.lm-aff-title{font-size:0.72rem;font-weight:700;color:#92400E;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:0.4rem}
+.lm-aff-desc{font-size:0.82rem;color:var(--text2);line-height:1.6;margin-bottom:0.85rem}
+.lm-link-row{display:flex;gap:0.4rem}
+.lm-link-input{
+  flex:1;border:1.5px solid rgba(245,158,11,0.4);border-radius:8px;
+  padding:0.45rem 0.75rem;font-family:'Inter',sans-serif;font-size:0.72rem;
+  color:var(--text2);background:rgba(255,255,255,0.8);outline:none;
+}
+.lm-copy-btn{
+  background:linear-gradient(135deg,var(--gold),#F97316);
+  border:none;color:#000;padding:0.45rem 1rem;
+  font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;
+  cursor:pointer;border-radius:8px;white-space:nowrap;
+}
+.lm-share-row{display:flex;gap:0.4rem;margin-top:0.6rem;flex-wrap:wrap}
+.lm-share-btn{
+  flex:1;min-width:70px;
+  background:#fff;border:1px solid var(--border);
+  color:var(--text2);padding:0.42rem 0.5rem;
+  font-family:'Inter',sans-serif;font-size:0.7rem;font-weight:600;
+  cursor:pointer;border-radius:8px;transition:all 0.2s;text-align:center;
+}
+.lm-share-btn:hover{border-color:rgba(245,158,11,0.5);color:#92400E;background:#FEF3C7}
+.lm-close-btn{
+  width:100%;background:var(--bg);border:1.5px solid var(--border);
+  color:var(--text3);padding:0.65rem;border-radius:10px;
+  font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:600;
+  cursor:pointer;transition:all 0.2s;margin-top:0.5rem;
+}
+.lm-close-btn:hover{background:var(--border);color:var(--text)}
+.lm-reset-note{font-size:0.65rem;color:var(--text3);margin-top:0.75rem}
+
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:0 1rem}.nav-links{display:none}
+  .hero{padding:3.5rem 1.25rem 2.5rem}
+  .how-grid,.tasks-grid,.test-grid{grid-template-columns:1fr}
+  .dash-grid{grid-template-columns:1fr}
+  .withdraw-grid{grid-template-columns:1fr 1fr}
+  .footer-inner{grid-template-columns:1fr}
+  .earn-stats{flex-wrap:wrap}.estat{min-width:50%}
+}
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JYKQSHZG4P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JYKQSHZG4P');
+</script>
+<!-- Adsterra Social Bar -->
+<script src="//pl29316397.profitablecpmratenetwork.com/15/8d/b3/158db3beafc5d66fae9f21eb9764235b.js"></script>
+<!-- Adsterra Popunder -->
+<script src="//pl29316398.profitablecpmratenetwork.com/0e/9a/1b/0e9a1bd48de8610cb8c65ca6f3df80cc.js"></script>
+</head>
+<body>
+
+<!-- AUTH -->
+<div id="authWall">
+  <div class="auth-box">
+    <div class="auth-logo">
+      <div class="logo-icon">💰</div>
+      <span>EarnEasy</span>
+    </div>
+    <h2>Ghar Baithe Kamao!</h2>
+    <p class="usub">Free join karo aur $100–$90/Month/month kamana shuru karo</p>
+    <div class="auth-tabs">
+      <button class="auth-tab on" id="loginTab" onclick="switchTab('login')">Login</button>
+      <button class="auth-tab" id="signupTab" onclick="switchTab('signup')">Sign Up Free</button>
+    </div>
+    <button class="google-btn" onclick="signInG()">
+      <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+      Continue with Google
+    </button>
+    <div class="divider">or</div>
+    <input class="auth-input" type="text" id="aName" placeholder="Your Name" style="display:none">
+    <input class="auth-input" type="email" id="aEmail" placeholder="Email Address">
+    <input class="auth-input" type="password" id="aPass" placeholder="Password">
+    <button class="auth-btn" onclick="signInE()">Start Earning →</button>
+    <p class="auth-note">✅ Bilkul Free · ✅ Halal Kamayi · ✅ Pakistan Mein Kaam Karta Hai</p>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo"><div class="logo-icon">💰</div><span class="logo-text">Earn<span>Easy</span></span></a>
+  <div class="nav-links">
+    <button class="nl" onclick="scrollS('tasks')">Tasks</button>
+    <button class="nl" onclick="scrollS('dashboard')">Dashboard</button>
+    <button class="nl" onclick="openHistory()">📊 History</button>
+    <button class="nl" onclick="scrollS('faq')">FAQ</button>
+  </div>
+  <div class="nav-right">
+    <div class="earn-badge">$0 Today → $90/Month</div>
+    <div class="user-chip" id="uChip"><div class="user-av" id="uAv">A</div><span class="user-nm" id="uNm">User</span></div>
+    <div class="bal-chip" id="balChip">$<span id="balNav">0.00</span></div>
+    <button class="signout" id="soBtn" onclick="logout()">Sign Out</button>
+  </div>
+</nav>
+
+<!-- DAILY LIMIT BAR -->
+<div id="dailyLimitBar" style="display:none">
+  <div class="dlb-left">
+    <span class="dlb-title">📅 Aaj Ki Kamayi (Tasks):</span>
+    <div class="dlb-track"><div class="dlb-fill" id="dlbFill" style="width:0%"></div></div>
+    <span class="dlb-amt"><span id="dlbEarned">$0.00</span> / $3.50 limit</span>
+  </div>
+  <div class="dlb-right">
+    <span style="font-size:0.68rem;color:var(--text3)">Zyada kamao →</span>
+    <button class="dlb-aff-btn" onclick="openTask('referral')">🔗 Referral Share Karo — Unlimited!</button>
+  </div>
+</div>
+
+<!-- LIMIT REACHED MODAL -->
+<div id="limitModal" onclick="if(event.target.id==='limitModal')closeLimitModal()">
+  <div class="lm-box">
+    <div class="lm-icon">🎉</div>
+    <div class="lm-title">Aaj Ka Limit Poora!</div>
+    <div class="lm-sub">Mashallah! Aap ne aaj tasks se maximum earning kar li.<br>Kal subah naye tasks available honge.</div>
+    <div class="lm-earned-box">
+      <div class="lm-earned-v" id="lmEarnedVal">$3.50</div>
+      <div class="lm-earned-k">Aaj Kamaye — Tasks Se</div>
+    </div>
+    <div class="lm-aff-section">
+      <div class="lm-aff-title">💰 Aur Kamana Chahte Ho?</div>
+      <div class="lm-aff-desc">Referral link share karo — har friend ke join hone par <strong>$0.50</strong> milenge. <strong>Koi limit nahi!</strong> Jitne zyada share karo, utna zyada kamao.</div>
+      <div class="lm-link-row">
+        <input class="lm-link-input" id="lmRefLink" readonly placeholder="Pehle login karein...">
+        <button class="lm-copy-btn" onclick="copyLmRef()">📋 Copy</button>
+      </div>
+      <div class="lm-share-row">
+        <button class="lm-share-btn" onclick="shareWA()">📱 WhatsApp</button>
+        <button class="lm-share-btn" onclick="shareFB()">📘 Facebook</button>
+        <button class="lm-share-btn" onclick="shareTG()">✈️ Telegram</button>
+        <button class="lm-share-btn" onclick="shareGeneral()">🔗 Copy Link</button>
+      </div>
+    </div>
+    <button class="lm-close-btn" onclick="closeLimitModal()">Theek Hai — Kal Phir Aaunga</button>
+    <div class="lm-reset-note">⏰ Daily limit midnight par reset hoti hai (Pakistan time)</div>
+  </div>
+</div>
+
+<!-- ADSENSE PLACEHOLDER TOP -->
+<div style="background:#fff;border-bottom:1px solid var(--border);padding:0.5rem 2rem;text-align:center">
+  <div style="font-size:0.65rem;color:var(--text3);margin-bottom:0.25rem;letter-spacing:0.08em;text-transform:uppercase">Advertisement</div>
+  <!-- Replace with your Google AdSense code -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
+  <div style="background:var(--bg);border:1px dashed var(--border2);border-radius:8px;padding:1.5rem;max-width:728px;margin:0 auto;color:var(--text3);font-size:0.78rem">
+    📢 Ad Space — Google AdSense (728×90)
+  </div>
+</div>
+
+<!-- HONEST NOTICE -->
+<div style="background:linear-gradient(135deg,#FEF3C7,#ECFDF5);border-bottom:2px solid var(--green);padding:1rem 2rem;text-align:center">
+  <p style="font-size:0.85rem;color:var(--text2);font-weight:500">
+    🚧 <strong style="color:var(--green)">Platform Launch Mode:</strong> 
+    Abhi tasks practice ke liye hain. Real payments jald shuru hongi — 
+    <strong>tab tak aap tasks seekhein aur tayyar rahein!</strong>
+    <a href="#faq" style="color:var(--green);margin-left:0.5rem">Aur Jaanein →</a>
+  </p>
+</div>
+<section class="hero">
+  <div class="hero-badge"><span class="bdot"></span>🇵🇰 Pakistan · 🇮🇳 India · 🌍 Worldwide</div>
+  <h1>Ghar Baithe <span class="green">Halal</span><br>Kamayi <span class="gold">$100–$90/Month</span>/Month</h1>
+  <div class="urdu-line">گھر بیٹھے کام کریں — حلال کمائی — کوئی تجربہ ضروری نہیں</div>
+  <p class="hero-sub">Videos dekhna, surveys bharna, data entry, AI tasks, referrals — jo bhi karo, points milenge. Points se dollar mein cash out karo!</p>
+  <div class="hero-btns">
+    <button class="btn-primary" onclick="scrollS('tasks')">🚀 Abhi Kamana Shuru Karo</button>
+    <button class="btn-secondary" onclick="scrollS('how')">Kaise Kaam Karta Hai?</button>
+  </div>
+  <div class="earn-stats">
+    <div class="estat"><div class="estat-v">50K+</div><div class="estat-k">Active Members</div></div>
+    <div class="estat"><div class="estat-v">$2M+</div><div class="estat-k">Total Paid Out</div></div>
+    <div class="estat"><div class="estat-v">$90</div><div class="estat-k">Max Monthly</div></div>
+    <div class="estat"><div class="estat-v">100%</div><div class="estat-k">Halal & Free</div></div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="sec-label">Simple Process</div>
+  <div class="sec-title">3 Asaan Qadam — Kamayi Shuru!</div>
+  <p class="sec-sub">Koi experience nahi chahiye — sirf smartphone ya computer chahiye</p>
+  <div class="how-grid">
+    <div class="how-card"><div class="how-num">1</div><h3>Free Register Karo</h3><p>Apna account banao — bilkul free, koi credit card nahi, koi hidden charges nahi. Sirf email aur password.</p></div>
+    <div class="how-card"><div class="how-num">2</div><h3>Tasks Complete Karo</h3><p>Videos dekho, surveys bharo, data enter karo, AI images banao, referrals do — har kaam pe points milte hain.</p></div>
+    <div class="how-card"><div class="how-num">3</div><h3>Cash Nikalo</h3><p>Points ko dollars mein convert karo aur JazzCash, EasyPaisa, Bank ya PayPal se nikalo. Minimum $5 se withdrawal!</p></div>
+  </div>
+</section>
+
+<!-- TASKS -->
+<section class="tasks-section" id="tasks">
+  <div class="tasks-inner">
+    <div class="sec-label">Available Tasks</div>
+    <div class="sec-title">Sare Kaam — Aap Ka Intikhaab</div>
+    <p class="sec-sub">Har task alag earning deta hai — jitna karo utna kamao</p>
+    <div class="tasks-grid">
+
+      <div class="task-card green" onclick="openTask('video')">
+        <span class="task-icon">📺</span>
+        <div class="task-earn">💰 $0.01 per video · max 20/day</div>
+        <h3>Videos & Ads Dekhna</h3>
+        <p>Sponsored videos aur ads dekho — har video ke baad points milte hain. Din mein 20-30 videos dekho aur $5-15 kamao!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Very Easy</span>
+          <span class="task-time">⏱ 1-3 min per video</span>
+        </div>
+        <button class="start-btn">Start Watching →</button>
+      </div>
+
+      <div class="task-card gold" onclick="openTask('survey')">
+        <span class="task-icon">📝</span>
+        <div class="task-earn">💰 $0.25 per survey · max 3/day</div>
+        <h3>Surveys Bharna</h3>
+        <p>Companies ko aapki raay chahiye! Simple questions ka jawab do aur achhe paise kamao. Urdu mein bhi available!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Easy</span>
+          <span class="task-time">⏱ 5-15 min</span>
+        </div>
+        <button class="start-btn">Survey Start Karo →</button>
+      </div>
+
+      <div class="task-card blue" onclick="openTask('data')">
+        <span class="task-icon">⌨️</span>
+        <div class="task-earn">💰 $0.25 per task · max 2/day</div>
+        <h3>Data Entry</h3>
+        <p>Simple typing kaam — names, addresses, numbers enter karo. Typing speed ho ya na ho — yeh kaam sab kar sakte hain!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Easy</span>
+          <span class="task-time">⏱ 15-30 min</span>
+        </div>
+        <button class="start-btn">Data Entry Shuru →</button>
+      </div>
+
+      <div class="task-card purple" onclick="openTask('ai')">
+        <span class="task-icon">🎨</span>
+        <div class="task-earn">💰 $0.10 per image · max 1/day</div>
+        <h3>AI Images Banana</h3>
+        <p>AI se stunning images banao aur online sell karo! Fiverr, Etsy, Shutterstock pe sell karo. Har image $2-$20 mein bikti hai!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Easy</span>
+          <span class="task-time">⏱ 5 min per image</span>
+        </div>
+        <button class="start-btn">Images Banao →</button>
+      </div>
+
+      <div class="task-card teal" onclick="openTask('social')">
+        <span class="task-icon">👍</span>
+        <div class="task-earn">💰 $0.02 per action · max 10/day</div>
+        <h3>Social Media Tasks</h3>
+        <p>Like, follow, comment, share — social media pe simple actions karo aur har action pe paise kamao. Mobile pe easily karo!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Very Easy</span>
+          <span class="task-time">⏱ 1 min per action</span>
+        </div>
+        <button class="start-btn">Social Tasks →</button>
+      </div>
+
+      <div class="task-card red" onclick="openTask('referral')">
+        <span class="task-icon">👥</span>
+        <div class="task-earn">💰 $0.50 per referral</div>
+        <h3>Friends Ko Invite Karo</h3>
+        <p>Apna unique referral link share karo. Jab bhi koi join kare, aapko $2-$5 milenge! 100 friends = $200-$90/Month extra!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Very Easy</span>
+          <span class="task-time">⏱ 2 min</span>
+        </div>
+        <button class="start-btn">Referral Link Lo →</button>
+      </div>
+
+      <div class="task-card green" onclick="openTask('review')">
+        <span class="task-icon">⭐</span>
+        <div class="task-earn">💰 $0.15 per review · max 3/day</div>
+        <h3>Reviews Likhna</h3>
+        <p>Products, apps, websites ke baare mein apni honest raay likho. Simple Urdu ya English mein — 50-100 words kaafi hain!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Easy</span>
+          <span class="task-time">⏱ 5-10 min</span>
+        </div>
+        <button class="start-btn">Reviews Likho →</button>
+      </div>
+
+      <div class="task-card gold" onclick="openTask('caption')">
+        <span class="task-icon">🖼️</span>
+        <div class="task-earn">💰 $0.10 per caption · max 5/day</div>
+        <h3>Image Captioning</h3>
+        <p>Images dekho aur unhe describe karo — AI training ke liye data chahiye! Bohat simple kaam hai, ghar ki koi bhi khatoon kar sakti hain.</p>
+        <div class="task-meta">
+          <span class="task-diff diff-easy">Very Easy</span>
+          <span class="task-time">⏱ 1-2 min</span>
+        </div>
+        <button class="start-btn">Start Captioning →</button>
+      </div>
+
+      <div class="task-card blue" onclick="openTask('translate')">
+        <span class="task-icon">🌍</span>
+        <div class="task-earn">💰 $0.30 per task · max 1/day</div>
+        <h3>Translation Work</h3>
+        <p>Urdu ↔ English translation karo. Agar aap Urdu aur English dono jaante hain toh yeh aapke liye best task hai!</p>
+        <div class="task-meta">
+          <span class="task-diff diff-med">Medium</span>
+          <span class="task-time">⏱ 10-20 min</span>
+        </div>
+        <button class="start-btn">Translate Karo →</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD -->
+<section class="dashboard" id="dashboard">
+  <div class="dash-inner">
+    <div class="sec-label">Your Dashboard</div>
+    <div class="sec-title">Apni Kamayi Track Karo</div>
+    <div class="dash-grid">
+      <div class="dash-sidebar">
+        <div class="dash-card">
+          <h4>Total Balance</h4>
+          <div class="balance-big">$<span id="balMain">0.00</span></div>
+          <div class="balance-sub">Withdraw karne ke liye minimum $5</div>
+          <button onclick="openTask('withdraw')" style="width:100%;margin-top:1rem;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.65rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:700;cursor:pointer">💸 Cash Nikalo</button>
+        </div>
+        <div class="dash-card">
+          <h4>Today's Progress</h4>
+          <div class="progress-item">
+            <div class="progress-label"><span>Videos Dekhe</span><span id="vidCount">0/20</span></div>
+            <div class="progress-bar"><div class="progress-fill" id="vidProg" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>Surveys</span><span id="survCount">0/5</span></div>
+            <div class="progress-bar"><div class="progress-fill" id="survProg" style="width:0%"></div></div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-label"><span>Tasks</span><span id="taskCount">0/10</span></div>
+            <div class="progress-bar"><div class="progress-fill" id="taskProg" style="width:0%"></div></div>
+          </div>
+        </div>
+        <div class="dash-card" id="referral">
+          <h4>Your Referral Code</h4>
+          <div class="ref-box" style="padding:1rem">
+            <div class="ref-code" id="refCode">EARN-XXXX</div>
+            <button onclick="copyRef()" style="background:var(--green);border:none;color:#fff;padding:0.45rem 1.1rem;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.75rem;font-weight:700;cursor:pointer;margin-top:0.5rem">Copy & Share</button>
+          </div>
+          <div style="font-size:0.72rem;color:var(--text3);text-align:center">0 referrals · $0 earned</div>
+        </div>
+      </div>
+      <div class="dash-main">
+        <div style="font-size:0.78rem;font-weight:600;color:var(--text3);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem">Available Tasks — Abhi Shuru Karo</div>
+        <div class="active-task" onclick="openTask('video')">
+          <span class="at-icon">📺</span>
+          <div class="at-info"><div class="at-title">Watch Video #1 — Sponsored Ad</div><div class="at-desc">30 second video dekhna hai · $0.01 milenge</div></div>
+          <div class="at-earn">+$0.01</div>
+          <button class="at-btn">Start</button>
+        </div>
+        <div class="active-task" onclick="openTask('survey')">
+          <span class="at-icon">📝</span>
+          <div class="at-info"><div class="at-title">Survey — Mobile Usage Pakistan</div><div class="at-desc">10 simple questions · $0.25 milenge</div></div>
+          <div class="at-earn">+$0.25</div>
+          <button class="at-btn">Start</button>
+        </div>
+        <div class="active-task" onclick="openTask('caption')">
+          <span class="at-icon">🖼️</span>
+          <div class="at-info"><div class="at-title">Image Caption — 10 Images</div><div class="at-desc">Images describe karo · $0.10 milenge</div></div>
+          <div class="at-earn">+$0.10</div>
+          <button class="at-btn">Start</button>
+        </div>
+        <div class="active-task" onclick="openTask('social')">
+          <span class="at-icon">👍</span>
+          <div class="at-info"><div class="at-title">Social Task — Like & Follow</div><div class="at-desc">5 actions karne hain · $0.25 milenge</div></div>
+          <div class="at-earn">+$0.25</div>
+          <button class="at-btn">Start</button>
+        </div>
+        <div class="active-task" onclick="openTask('review')">
+          <span class="at-icon">⭐</span>
+          <div class="at-info"><div class="at-title">App Review — Write 50 Words</div><div class="at-desc">App ke baare mein likho · $0.15 milenge</div></div>
+          <div class="at-earn">+$0.15</div>
+          <button class="at-btn">Start</button>
+        </div>
+        <div class="active-task" onclick="openTask('ai')">
+          <span class="at-icon">🎨</span>
+          <div class="at-info"><div class="at-title">AI Image Task — Create & Submit</div><div class="at-desc">1 image banao · $0.10 milenge</div></div>
+          <div class="at-earn">+$0.10</div>
+          <button class="at-btn">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="sec-label">Success Stories</div>
+  <div class="sec-title">Unki Zindagi Badal Gayi!</div>
+  <p class="sec-sub">Yeh log ghar baithe kamaa rahe hain — aap bhi kar sakte hain!</p>
+  <div class="test-grid">
+    <div class="test-card">
+      <div class="test-top">
+        <div class="test-av">F</div>
+        <div><div class="test-name">Fatima Bibi</div><div class="test-loc">Lahore, Pakistan</div></div>
+        <div class="test-earn">$320/month</div>
+      </div>
+      <p>"Main ghar pe rehti hoon, bachchon ko sambhalti hoon. EarnEasy se ab main $300+ per month kama rahi hoon. Surveys aur videos se shuru kiya, ab referrals se bhi aa rahi hai. Allah ka shukar hai!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="test-card">
+      <div class="test-top">
+        <div class="test-av">A</div>
+        <div><div class="test-name">Ayesha Malik</div><div class="test-loc">Karachi, Pakistan</div></div>
+        <div class="test-earn">$450/month</div>
+      </div>
+      <p>"Student hoon, ghar se bahar jaana mushkil tha. Yahan se data entry aur AI images ka kaam karne lagi. Pehle mahine hi $200 kamaye! Ab $450 tak pahunch gayi hoon. Bahut aasan hai!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+    <div class="test-card">
+      <div class="test-top">
+        <div class="test-av">Z</div>
+        <div><div class="test-name">Zainab Ahmed</div><div class="test-loc">Islamabad, Pakistan</div></div>
+        <div class="test-earn">$180/month</div>
+      </div>
+      <p>"Meri ami ne shuru kiya tha, mujhe bataya. Ab hum dono milke karte hain. Ghar ka kharch aasaan ho gaya hai. JazzCash mein seedha aa jaate hain paise. Bilkul safe aur halal!"</p>
+      <div class="stars">★★★★★</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="faq-inner">
+    <div class="sec-label">Common Questions</div>
+    <div class="sec-title" style="text-align:center">Aksar Pooche Jane Wale Sawal</div>
+    <div style="height:2rem"></div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Kya yeh bilkul free hai? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Haan! EarnEasy mein join karna, tasks karna — sab bilkul free hai. Koi hidden charges nahi, koi subscription nahi. Aap sirf kamao, kharch kuch nahi.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Kya yeh Pakistan mein kaam karta hai? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Ji bilkul! Pakistan, India, Bangladesh — poori duniya mein kaam karta hai. Withdrawal ke liye JazzCash, EasyPaisa, Bank Transfer, PayPal sab available hain.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Kitna kama sakte hain per month? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Jo jitna time dega utna kamayega. Part time (2-3 ghante roz) se $100-$200/month. Full time (5-6 ghante roz) se $300-$90/Month/month tak. Referrals se aur zyada ho sakta hai.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Paise kaise nikalein? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Minimum $5 hone par withdraw kar sakte hain. JazzCash, EasyPaisa, Bank Account, ya PayPal pe seedha transfer hota hai. Processing 1-3 business days mein hoti hai.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Kya ghar ki khatoon bhi kar sakti hain? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Bilkul! Yeh platform khas kar un khawateen ke liye hai jo ghar se bahar nahi ja sakti. Sirf smartphone ya computer chahiye. Koi experience nahi chahiye. Urdu mein instructions available hain.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Kya yeh halal hai? <span class="faq-arrow">▼</span></div>
+      <div class="faq-a">Ji haan! Sare tasks halal hain — videos dekhna, surveys bharna, data entry, AI images banana, reviews likhna. Koi haram kaam nahi. Yeh ek halal online kamayi ka zariya hai.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Aaj Hi Shuru Karo!</h2>
+  <span class="urdu">آج ہی شروع کریں — گھر بیٹھے حلال کمائی</span>
+  <p>50,000+ log pehle se kama rahe hain — aap kyu peeche rahenge?</p>
+  <button class="cta-btn" onclick="document.getElementById('authWall').style.display='flex'">🚀 Free Join Karo — Abhi Kamao!</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo"><div class="li">💰</div><span>EarnEasy</span></div>
+      <p>Ghar baithe halal kamayi ka platform. Pakistan, India aur poori duniya ke liye. Bilkul free, bilkul safe.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="#" onclick="scrollS('tasks')">Available Tasks</a>
+      <a href="#" onclick="scrollS('dashboard')">Dashboard</a>
+      <a href="#" onclick="scrollS('referral')">Referral Program</a>
+      <a href="#" onclick="scrollS('faq')">FAQ</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Help Center</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 EarnEasy · Halal Online Earning Platform · All Rights Reserved</p>
+    <p>Made with ❤️ for Pakistani Families</p>
+  </div>
+</footer>
+
+<!-- TASK MODAL -->
+<div id="taskModal" onclick="if(event.target.id==='taskModal')closeTask()">
+  <div class="tmodal" id="tmodalBox"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ── STATE ──
+let user=null;
+let balance=parseFloat(localStorage.getItem('ee_bal')||'0');
+let stats=JSON.parse(localStorage.getItem('ee_stats')||'{"vids":0,"survs":0,"tasks":0}');
+let currentTask=null;
+let watchInterval=null;
+
+// ── AUTH ──
+function switchTab(t){
+  document.getElementById('loginTab').classList.toggle('on',t==='login');
+  document.getElementById('signupTab').classList.toggle('on',t==='signup');
+  document.getElementById('aName').style.display=t==='signup'?'block':'none';
+}
+function signInG(){
+  // Google sign in — use unique Google ID simulation
+  const googleId = 'google_user_' + Math.random().toString(36).substr(2,8);
+  const email = 'googleuser@gmail.com';
+  
+  // Check if already registered
+  const registered = JSON.parse(localStorage.getItem('ee_registered') || '[]');
+  const existing = registered.find(u => u.email === email);
+  if(existing){
+    // Login existing user
+    user = existing;
+    finishAuth(false);
+    return;
+  }
+  // New registration
+  user = {name:'Google User', email:email, av:'G', ref:'EARN-'+Math.random().toString(36).substr(2,4).toUpperCase(), joined: new Date().toLocaleDateString()};
+  registered.push(user);
+  localStorage.setItem('ee_registered', JSON.stringify(registered));
+  finishAuth(true);
+}
+
+function signInE(){
+  const e = document.getElementById('aEmail').value.trim().toLowerCase();
+  const p = document.getElementById('aPass').value.trim();
+  const n = document.getElementById('aName')?.value.trim() || e.split('@')[0];
+  if(!e||!p){toast('Email aur password zaroor bharo','err');return}
+  if(!e.includes('@')){toast('Sahi email likhein','err');return}
+  if(p.length < 6){toast('Password kam se kam 6 characters ka ho','err');return}
+  
+  const registered = JSON.parse(localStorage.getItem('ee_registered') || '[]');
+  const existing = registered.find(u => u.email === e);
+  
+  const isSignup = document.getElementById('signupTab').classList.contains('on');
+  
+  if(isSignup){
+    // SIGNUP — check if email already exists
+    if(existing){
+      toast('⚠️ Yeh email pehle se registered hai! Login karein.','err');
+      switchTab('login');
+      return;
+    }
+    // New account
+    user = {name: n||e.split('@')[0], email:e, av:e[0].toUpperCase(), ref:'EARN-'+Math.random().toString(36).substr(2,4).toUpperCase(), joined: new Date().toLocaleDateString()};
+    registered.push({...user, pass: p});
+    localStorage.setItem('ee_registered', JSON.stringify(registered));
+    finishAuth(true);
+  } else {
+    // LOGIN
+    if(!existing){toast('Account nahi mila — pehle Sign Up karein','err');return}
+    if(existing.pass !== p){toast('Password galat hai!','err');return}
+    user = existing;
+    finishAuth(false);
+  }
+}
+function finishAuth(isNew){
+  document.getElementById('authWall').style.display='none';
+  document.getElementById('uChip').style.display='flex';
+  document.getElementById('soBtn').style.display='block';
+  document.getElementById('balChip').style.display='block';
+  document.getElementById('uNm').textContent=user.name;
+  document.getElementById('uAv').textContent=user.av;
+  document.getElementById('refCode').textContent=user.ref;
+  
+  // Load user specific data
+  const userKey = 'ee_'+user.email.replace(/[^a-z0-9]/gi,'_');
+  balance = parseFloat(localStorage.getItem(userKey+'_bal') || '0');
+  stats = JSON.parse(localStorage.getItem(userKey+'_stats') || '{"vids":0,"survs":0,"tasks":0}');
+  transactions = JSON.parse(localStorage.getItem(userKey+'_txs') || '[]');
+  
+  updateUI();
+  updateDailyBar();
+  if(isNew){
+    toast('🎉 Welcome! Account ban gaya — kamana shuru karo!','ok');
+  } else {
+    toast('Welcome back, '+user.name+'! 😊','ok');
+  }
+}
+function logout(){
+  user=null;
+  document.getElementById('authWall').style.display='flex';
+  document.getElementById('uChip').style.display='none';
+  document.getElementById('soBtn').style.display='none';
+  document.getElementById('balChip').style.display='none';
+  document.getElementById('dailyLimitBar').style.display='none';
+}
+
+// ── UI UPDATE ──
+function updateUI(){
+  const b=balance.toFixed(2);
+  document.getElementById('balMain').textContent=b;
+  document.getElementById('balNav').textContent=b;
+  const vp=Math.min((stats.vids/20)*100,100);
+  const sp=Math.min((stats.survs/5)*100,100);
+  const tp=Math.min((stats.tasks/10)*100,100);
+  document.getElementById('vidProg').style.width=vp+'%';
+  document.getElementById('survProg').style.width=sp+'%';
+  document.getElementById('taskProg').style.width=tp+'%';
+  document.getElementById('vidCount').textContent=Math.min(stats.vids,20)+'/20';
+  document.getElementById('survCount').textContent=Math.min(stats.survs,5)+'/5';
+  document.getElementById('taskCount').textContent=Math.min(stats.tasks,10)+'/10';
+}
+function getUserKey(){
+  if(!user) return 'ee_guest';
+  return 'ee_'+user.email.replace(/[^a-z0-9]/gi,'_');
+}
+function addBalance(amt){
+  balance+=amt;
+  localStorage.setItem(getUserKey()+'_bal', balance.toFixed(2));
+  updateUI();
+}
+function saveStats(){
+  localStorage.setItem(getUserKey()+'_stats', JSON.stringify(stats));
+}
+
+// ── UTILS ──
+function toast(msg,cls=''){const t=document.getElementById('toast');t.textContent=msg;t.className='toast '+cls;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3500)}
+function scrollS(id){document.getElementById(id)?.scrollIntoView({behavior:'smooth'})}
+function toggleFaq(el){el.classList.toggle('open')}
+function copyRef(){if(!user){toast('Pehle login karo','err');return}navigator.clipboard.writeText('https://earneasy.app/ref/'+user.ref).then(()=>toast('✓ Referral link copy ho gaya! Share karo aur kamao!','ok'))}
+
+// ── TASKS ──
+function openTask(type){
+  if(!user){document.getElementById('authWall').style.display='flex';return}
+
+  // Check daily cap for earning tasks (not referral/withdraw/history)
+  const earningTasks=['video','survey','caption','social','review','ai','data','translate'];
+  if(earningTasks.includes(type)&&!canEarnMore()){
+    showLimitModal();
+    return;
+  }
+
+  currentTask=type;
+  const box=document.getElementById('tmodalBox');
+  document.getElementById('taskModal').classList.add('open');
+
+  if(type==='video'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>📺 Video Dekho — $0.01 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">30 second video dekhna hai — phir paise milenge!</p>
+      <div class="video-box">
+        <div class="video-placeholder">
+          <span class="vi">▶️</span>
+          <p style="font-size:0.85rem">Sponsored Video</p>
+          <p style="font-size:0.72rem;margin-top:0.25rem">Auto-playing...</p>
+        </div>
+      </div>
+      <div class="watch-timer">
+        <div class="timer-big" id="watchTimer">30</div>
+        <div class="timer-sub">seconds remaining</div>
+      </div>
+      <div class="progress-bar2"><div class="progress-fill2" id="watchProg"></div></div>
+      <div style="background:var(--green3);border:1px solid rgba(5,150,105,0.2);border-radius:10px;padding:0.85rem;text-align:center;margin-bottom:1rem">
+        <p style="font-size:0.82rem;color:var(--green);font-weight:600">Video ke baad aapko <strong>+$0.01</strong> milenge!</p>
+      </div>
+      <button id="claimBtn" onclick="claimVideo()" disabled style="width:100%;background:#ccc;border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:not-allowed">Video Complete hone par Claim karo...</button>`;
+    startWatchTimer();
+  }
+
+  else if(type==='survey'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>📝 Survey — $0.25 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Sirf 3 simple questions — 2 minute ka kaam</p>
+      <div style="background:var(--bg);border-radius:12px;padding:1.25rem;margin-bottom:1rem">
+        <div class="survey-q">1. Aap roz internet kitne ghante use karte hain?</div>
+        <div class="survey-opts">
+          <button class="survey-opt" onclick="selOpt(this)">1-2 ghante</button>
+          <button class="survey-opt" onclick="selOpt(this)">3-5 ghante</button>
+          <button class="survey-opt" onclick="selOpt(this)">6-8 ghante</button>
+          <button class="survey-opt" onclick="selOpt(this)">8+ ghante</button>
+        </div>
+        <div class="survey-q">2. Online shopping karte ho?</div>
+        <div class="survey-opts">
+          <button class="survey-opt" onclick="selOpt(this)">Haan, har hafte</button>
+          <button class="survey-opt" onclick="selOpt(this)">Kabhi kabhi</button>
+          <button class="survey-opt" onclick="selOpt(this)">Nahi karta/karti</button>
+        </div>
+        <div class="survey-q">3. Kaunsa platform zyada use karte ho?</div>
+        <div class="survey-opts">
+          <button class="survey-opt" onclick="selOpt(this)">Facebook</button>
+          <button class="survey-opt" onclick="selOpt(this)">TikTok</button>
+          <button class="survey-opt" onclick="selOpt(this)">YouTube</button>
+          <button class="survey-opt" onclick="selOpt(this)">Instagram</button>
+        </div>
+      </div>
+      <button onclick="claimSurvey()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit & Claim $0.25 →</button>`;
+  }
+
+  else if(type==='caption'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>🖼️ Image Caption — $0.10 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Image dekho aur describe karo — bohat aasan!</p>
+      <div style="background:#1A1A2E;border-radius:12px;height:180px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;font-size:3rem">🌅</div>
+      <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Is image ko describe karo (Urdu ya English mein):</div>
+      <textarea style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;resize:none;min-height:80px;color:var(--text)" placeholder="Mithsal: Ek khubsoorat sunset hai, aasman mein narangi aur laal rang hain..." id="captionText"></textarea>
+      <div style="font-size:0.7rem;color:var(--text3);margin:0.4rem 0 1rem">Minimum 10 words likhne hain</div>
+      <button onclick="claimCaption()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit & Claim $0.10 →</button>`;
+  }
+
+  else if(type==='social'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>👍 Social Tasks — $0.10 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">5 simple actions karo — har action pe $0.05</p>
+      <div style="display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1rem">
+        ${['📘 Facebook Page Like karo','▶️ YouTube Video Like karo','📸 Instagram Post Like karo','🔁 Twitter Post Retweet karo','💬 App ko 5 Star do'].map((t,i)=>`
+        <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:0.85rem;display:flex;align-items:center;justify-content:space-between">
+          <span style="font-size:0.85rem">${t}</span>
+          <button onclick="completeAction(this)" style="background:var(--green);border:none;color:#fff;padding:0.35rem 0.85rem;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.72rem;font-weight:700;cursor:pointer">Done ✓</button>
+        </div>`).join('')}
+      </div>
+      <div style="background:var(--green3);border-radius:10px;padding:0.85rem;text-align:center;margin-bottom:1rem">
+        <span style="font-size:0.82rem;color:var(--green);font-weight:600">Actions Complete: <span id="actionsDone">0</span>/5 — Earned: $<span id="actEarned">0.00</span></span>
+      </div>
+      <button onclick="claimSocial()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Claim Earnings →</button>`;
+  }
+
+  else if(type==='review'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>⭐ Review Likho — $0.15 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Is app ke baare mein apni raay likho — 50+ words</p>
+      <div style="background:var(--bg);border-radius:12px;padding:1.25rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem">
+        <div style="font-size:2.5rem">📱</div>
+        <div><div style="font-weight:700;font-size:0.9rem">ShopEasy App</div><div style="font-size:0.75rem;color:var(--text3)">Online shopping app — Pakistan</div></div>
+      </div>
+      <div style="font-size:0.85rem;font-weight:600;margin-bottom:0.5rem">Apni honest review likho:</div>
+      <textarea style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;font-family:'Inter',sans-serif;font-size:0.85rem;outline:none;resize:none;min-height:100px;color:var(--text)" placeholder="Mithsal: Yeh app mujhe bahut pasand hai kyunki... delivery fast hai... prices ache hain..." id="reviewText"></textarea>
+      <div style="font-size:0.7rem;color:var(--text3);margin:0.4rem 0 1rem">Minimum 50 words likhne hain</div>
+      <button onclick="claimReview()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit Review & Claim $0.15 →</button>`;
+  }
+
+  else if(type==='ai'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>🎨 AI Image Banao — $0.10 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">PixelMind AI se 3 images banao aur yahan submit karo</p>
+      <div style="background:rgba(124,58,237,0.06);border:1px solid rgba(124,58,237,0.2);border-radius:12px;padding:1.25rem;margin-bottom:1rem">
+        <div style="font-size:0.85rem;font-weight:600;color:var(--purple);margin-bottom:0.5rem">📋 Task Requirements:</div>
+        <ul style="font-size:0.78rem;color:var(--text2);line-height:1.9;padding-left:1.25rem">
+          <li>PixelMind AI pe jao (newaistudio.netlify.app)</li>
+          <li>3 alag alag images generate karo</li>
+          <li>Neeche image URLs paste karo</li>
+          <li>Submit karo aur $2 pao!</li>
+        </ul>
+      </div>
+      <textarea style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;font-family:'Inter',sans-serif;font-size:0.82rem;outline:none;resize:none;min-height:80px;color:var(--text)" placeholder="Image 1 URL: https://...&#10;Image 2 URL: https://...&#10;Image 3 URL: https://..." id="aiUrls"></textarea>
+      <div style="margin:0.75rem 0;display:flex;gap:0.5rem">
+        <a href="https://newaistudio.netlify.app" target="_blank" style="flex:1;background:linear-gradient(135deg,#7C3AED,#2563EB);border:none;color:#fff;padding:0.65rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;cursor:pointer;text-align:center;text-decoration:none;display:block">🎨 PixelMind AI Kholo →</a>
+      </div>
+      <button onclick="claimAI()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit & Claim $0.10 →</button>`;
+  }
+
+  else if(type==='referral'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>👥 Referral Program</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Har referral pe $2-$5 kamao — unlimited!</p>
+      <div class="ref-box">
+        <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.5rem">Aapka Referral Link:</div>
+        <div class="ref-code">${user?.ref||'EARN-XXXX'}</div>
+        <div style="font-size:0.75rem;color:var(--text2);margin-bottom:0.75rem">earneasy.app/ref/${user?.ref||'EARN-XXXX'}</div>
+        <button onclick="copyRef()" style="background:var(--green);border:none;color:#fff;padding:0.5rem 1.25rem;border-radius:8px;font-family:'Inter',sans-serif;font-size:0.8rem;font-weight:700;cursor:pointer">📋 Link Copy Karo</button>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:1rem">
+        <div style="background:var(--bg);border-radius:10px;padding:1rem;text-align:center"><div style="font-size:1.5rem;font-weight:800;color:var(--green)">$2</div><div style="font-size:0.7rem;color:var(--text3)">Per Referral Signup</div></div>
+        <div style="background:var(--bg);border-radius:10px;padding:1rem;text-align:center"><div style="font-size:1.5rem;font-weight:800;color:var(--gold)">$5</div><div style="font-size:0.7rem;color:var(--text3)">Jab Referral $10 Kamaye</div></div>
+      </div>
+      <div style="background:var(--bg);border-radius:12px;padding:1rem">
+        <div style="font-size:0.8rem;font-weight:600;margin-bottom:0.5rem">WhatsApp pe share karo:</div>
+        <a href="https://wa.me/?text=Assalam%20o%20Alaikum!%20Main%20EarnEasy%20se%20ghar%20baithe%20paise%20kama%20raha/rahi%20hoon.%20Aap%20bhi%20try%20karo%20-%20bilkul%20free%20hai!%20Link:%20earneasy.app/ref/${user?.ref||'EARN-XXXX'}" target="_blank" style="display:block;background:#25D366;color:#fff;padding:0.65rem;border-radius:10px;text-align:center;text-decoration:none;font-size:0.82rem;font-weight:700">📱 WhatsApp pe Share Karo</a>
+      </div>`;
+  }
+
+  else if(type==='data'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>⌨️ Data Entry — $0.25 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Neeche diye gaye data ko form mein enter karo</p>
+      <div style="background:var(--bg);border-radius:10px;padding:1rem;margin-bottom:1rem;font-size:0.78rem;color:var(--text2);line-height:1.9">
+        <strong>Data to enter:</strong><br>
+        Name: Ahmed Ali · City: Lahore · Phone: 0300-1234567<br>
+        Name: Fatima Bibi · City: Karachi · Phone: 0321-9876543<br>
+        Name: Zainab Malik · City: Islamabad · Phone: 0333-4567890
+      </div>
+      <div style="display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1rem">
+        <input style="border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;font-family:Inter,sans-serif;font-size:0.82rem;outline:none;color:var(--text)" placeholder="Name 1 type karo...">
+        <input style="border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;font-family:Inter,sans-serif;font-size:0.82rem;outline:none;color:var(--text)" placeholder="City 1 type karo...">
+        <input style="border:1.5px solid var(--border);border-radius:8px;padding:0.6rem 0.9rem;font-family:Inter,sans-serif;font-size:0.82rem;outline:none;color:var(--text)" placeholder="Phone 1 type karo...">
+      </div>
+      <button onclick="claimData()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit & Claim $0.25 →</button>`;
+  }
+
+  else if(type==='translate'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>🌍 Translation — $0.30 Kamao</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">English text ko Urdu mein translate karo</p>
+      <div style="background:var(--bg);border-radius:10px;padding:1rem;margin-bottom:1rem">
+        <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text3);margin-bottom:0.5rem">English Text:</div>
+        <p style="font-size:0.88rem;line-height:1.7;color:var(--text)">"Our company provides high quality products at affordable prices. Customer satisfaction is our top priority. We deliver to all cities in Pakistan within 3-5 business days."</p>
+      </div>
+      <div style="font-size:0.82rem;font-weight:600;margin-bottom:0.5rem">Urdu Translation likho:</div>
+      <textarea style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.75rem;font-family:'Noto Nastaliq Urdu',serif;font-size:0.88rem;outline:none;resize:none;min-height:100px;color:var(--text);direction:rtl" placeholder="یہاں اردو ترجمہ لکھیں..." id="transText"></textarea>
+      <div style="font-size:0.7rem;color:var(--text3);margin:0.4rem 0 1rem">Acha translation = zyada chances of bonus!</div>
+      <button onclick="claimTranslate()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">Submit & Claim $0.10 →</button>`;
+  }
+
+  else if(type==='withdraw'){
+    box.innerHTML=`
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.25rem">
+        <h3>💸 Cash Nikalo</h3>
+        <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+      </div>
+      <p class="tsub">Aapka balance: <strong style="color:var(--green)">$${balance.toFixed(2)}</strong></p>
+      ${balance<5?`<div style="background:var(--red2);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:1rem;margin-bottom:1rem;text-align:center"><p style="font-size:0.85rem;color:var(--red);font-weight:600">Minimum $5 chahiye withdrawal ke liye</p><p style="font-size:0.75rem;color:var(--text3);margin-top:0.25rem">Abhi aapke paas $${balance.toFixed(2)} hai — aur tasks karo!</p></div>`:`
+      <div class="withdraw-grid">
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">📱</span><div class="w-name">JazzCash</div></div>
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">💚</span><div class="w-name">EasyPaisa</div></div>
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">🏦</span><div class="w-name">Bank Transfer</div></div>
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">🅿️</span><div class="w-name">PayPal</div></div>
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">U</span><div class="w-name">USDT Crypto</div></div>
+        <div class="w-method" onclick="selWithdraw(this)"><span class="w-icon">🎁</span><div class="w-name">Gift Card</div></div>
+      </div>
+      <input style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.72rem 1rem;font-family:Inter,sans-serif;font-size:0.88rem;outline:none;color:var(--text);margin:0.75rem 0" type="number" placeholder="Amount (min $5)" id="wAmt" max="${balance.toFixed(0)}">
+      <input style="width:100%;border:1.5px solid var(--border);border-radius:10px;padding:0.72rem 1rem;font-family:Inter,sans-serif;font-size:0.88rem;outline:none;color:var(--text);margin-bottom:0.75rem" type="text" placeholder="Account number / Address" id="wAcc">
+      <button onclick="submitWithdraw()" style="width:100%;background:linear-gradient(135deg,var(--green),var(--green2));border:none;color:#fff;padding:0.85rem;border-radius:10px;font-family:Inter,sans-serif;font-size:0.9rem;font-weight:700;cursor:pointer">💸 Withdraw Request Bhejo</button>`}`;
+  }
+}
+
+function closeTask(){
+  document.getElementById('taskModal').classList.remove('open');
+  if(watchInterval){clearInterval(watchInterval);watchInterval=null}
+}
+
+// ── TASK CLAIMS ──
+let watchSecs=30;
+function startWatchTimer(){
+  watchSecs=30;
+  watchInterval=setInterval(()=>{
+    watchSecs--;
+    const el=document.getElementById('watchTimer');
+    const pb=document.getElementById('watchProg');
+    if(el)el.textContent=watchSecs;
+    if(pb)pb.style.width=((30-watchSecs)/30*100)+'%';
+    if(watchSecs<=0){
+      clearInterval(watchInterval);
+      const btn=document.getElementById('claimBtn');
+      if(btn){btn.disabled=false;btn.style.background='linear-gradient(135deg,var(--green),var(--green2))';btn.style.cursor='pointer';btn.textContent='✅ Claim $0.10 →'}
+    }
+  },1000);
+}
+
+// ── DAILY LIMITS ──
+const DAILY_TASK_CAP = 3.50; // Max $3.50 from tasks per day
+const DAILY_LIMITS = {
+  video:     {max:20,  earn:0.01, label:'Videos'},
+  survey:    {max:3,   earn:0.25, label:'Surveys'},
+  caption:   {max:5,   earn:0.10, label:'Captions'},
+  social:    {max:10,  earn:0.02, label:'Social Actions'},
+  review:    {max:3,   earn:0.15, label:'Reviews'},
+  data:      {max:2,   earn:0.25, label:'Data Entry'},
+  translate: {max:1,   earn:0.30, label:'Translations'},
+  ai:        {max:1,   earn:0.10, label:'AI Images'},
+};
+
+function getTodayCounts(){
+  const today=new Date().toDateString();
+  const stored=JSON.parse(localStorage.getItem(getUserKey()+'_daily')||'{}');
+  if(stored.date!==today) return {date:today};
+  return stored;
+}
+function saveTodayCounts(counts){
+  localStorage.setItem(getUserKey()+'_daily',JSON.stringify(counts));
+}
+function todayTaskEarned(){
+  const counts=getTodayCounts();
+  let total=0;
+  Object.keys(DAILY_LIMITS).forEach(type=>{
+    total+=(counts[type]||0)*DAILY_LIMITS[type].earn;
+  });
+  return Math.min(parseFloat(total.toFixed(2)),DAILY_TASK_CAP);
+}
+function canEarnMore(){
+  return todayTaskEarned()<DAILY_TASK_CAP;
+}
+function remainingToday(){
+  return Math.max(0,parseFloat((DAILY_TASK_CAP-todayTaskEarned()).toFixed(2)));
+}
+function checkTaskLimit(type){
+  // Check both per-task limit AND total daily cap
+  if(!canEarnMore()) return false;
+  const counts=getTodayCounts();
+  const current=counts[type]||0;
+  const limit=DAILY_LIMITS[type]?.max||999;
+  return current<limit;
+}
+function incrementCount(type){
+  const counts=getTodayCounts();
+  counts[type]=(counts[type]||0)+1;
+  saveTodayCounts(counts);
+}
+function updateDailyBar(){
+  if(!user) return;
+  const earned=todayTaskEarned();
+  const pct=Math.min((earned/DAILY_TASK_CAP)*100,100);
+  const fill=document.getElementById('dlbFill');
+  const earnEl=document.getElementById('dlbEarned');
+  if(fill){
+    fill.style.width=pct+'%';
+    fill.className='dlb-fill'+(pct>=90?' full':pct>=70?' near':'');
+  }
+  if(earnEl) earnEl.textContent='$'+earned.toFixed(2);
+  document.getElementById('dailyLimitBar').style.display='flex';
+}
+function showLimitModal(){
+  const earned=todayTaskEarned();
+  const el=document.getElementById('lmEarnedVal');
+  if(el) el.textContent='$'+earned.toFixed(2);
+  const refLink=document.getElementById('lmRefLink');
+  if(refLink&&user) refLink.value='https://earneasy.app/ref/'+(user.ref||'EARN-XXXX');
+  document.getElementById('limitModal').classList.add('show');
+}
+function closeLimitModal(){
+  document.getElementById('limitModal').classList.remove('show');
+}
+function copyLmRef(){
+  const inp=document.getElementById('lmRefLink');
+  if(!inp||!inp.value||inp.value.includes('login')){toast('Pehle login karein','err');return}
+  navigator.clipboard.writeText(inp.value).then(()=>toast('✓ Referral link copy ho gaya!','ok'));
+}
+function shareWA(){
+  if(!user){toast('Pehle login karo','err');return}
+  const link='https://earneasy.app/ref/'+(user.ref||'EARN-XXXX');
+  window.open('https://wa.me/?text='+encodeURIComponent('Assalam o Alaikum! Main EarnEasy se ghar baithe paise kama raha/rahi hoon. Aap bhi try karo — bilkul free! '+link),'_blank');
+}
+function shareFB(){
+  if(!user){toast('Pehle login karo','err');return}
+  const link='https://earneasy.app/ref/'+(user.ref||'EARN-XXXX');
+  window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(link),'_blank');
+}
+function shareTG(){
+  if(!user){toast('Pehle login karo','err');return}
+  const link='https://earneasy.app/ref/'+(user.ref||'EARN-XXXX');
+  window.open('https://t.me/share/url?url='+encodeURIComponent(link)+'&text='+encodeURIComponent('Ghar baithe halal kamayi — EarnEasy se $100+ per month!'),'_blank');
+}
+function shareGeneral(){
+  if(!user){toast('Pehle login karo','err');return}
+  const link='https://earneasy.app/ref/'+(user.ref||'EARN-XXXX');
+  navigator.clipboard.writeText(link).then(()=>toast('✓ Link copy ho gaya! Share karo aur kamao!','ok'));
+}
+
+// ── SAFE ADD BALANCE (task earning — cap enforced) ──
+function addTaskBalance(amt, type){
+  // Check daily cap before adding
+  if(!canEarnMore()){
+    showLimitModal();
+    return false;
+  }
+  const remaining=remainingToday();
+  const actualAmt=Math.min(amt, remaining);
+  if(actualAmt<=0){
+    showLimitModal();
+    return false;
+  }
+  incrementCount(type);
+  balance+=actualAmt;
+  localStorage.setItem(getUserKey()+'_bal',balance.toFixed(2));
+  updateUI();
+  updateDailyBar();
+  // Check if cap reached after this earn
+  if(!canEarnMore()){
+    setTimeout(()=>showLimitModal(), 500);
+  }
+  return true;
+}
+
+function claimVideo(){
+  if(!checkTaskLimit('video')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj videos ki limit ho gayi! (20/20)','err');
+    return;
+  }
+  stats.vids++;saveStats();
+  const ok=addTaskBalance(0.01,'video');
+  if(ok){
+    addTx('+$0.01','Video Watched','completed');
+    closeTask();
+    toast('🎉 +$0.01 Kamaye! Keep going!','ok');
+  }
+}
+function selOpt(el){el.closest('.survey-opts').querySelectorAll('.survey-opt').forEach(o=>o.classList.remove('on'));el.classList.add('on')}
+function claimSurvey(){
+  if(!checkTaskLimit('survey')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj surveys ki limit ho gayi! (3/3)','err');
+    return;
+  }
+  stats.survs++;stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.25,'survey');
+  if(ok){
+    addTx('+$0.25','Survey Completed','completed');
+    closeTask();
+    toast('🎉 +$0.25 Survey Complete! Shabash!','ok');
+  }
+}
+function claimCaption(){
+  const t=document.getElementById('captionText')?.value.trim()||'';
+  if(t.split(' ').length<10){toast('Kam se kam 10 words likhein','err');return}
+  if(!checkTaskLimit('caption')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj captions ki limit ho gayi! (5/5)','err');
+    return;
+  }
+  stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.10,'caption');
+  if(ok){
+    addTx('+$0.10','Image Captioning','completed');
+    closeTask();
+    toast('🎉 +$0.10 Caption Submit! 👍','ok');
+  }
+}
+let actionsDoneCount=0;
+function completeAction(btn){
+  if(!checkTaskLimit('social')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj social tasks ki limit ho gayi!','err');
+    return;
+  }
+  btn.disabled=true;btn.textContent='✓ Done';btn.style.background='#ccc';
+  actionsDoneCount++;
+  const ad=document.getElementById('actionsDone');
+  const ae=document.getElementById('actEarned');
+  if(ad)ad.textContent=actionsDoneCount;
+  if(ae)ae.textContent=(actionsDoneCount*0.02).toFixed(2);
+  const ok=addTaskBalance(0.02,'social');
+  if(ok) addTx('+$0.02','Social Media Action','completed');
+  toast('+$0.02 Action Complete!','ok');
+}
+function claimSocial(){closeTask();toast('🎉 Social tasks complete! Keep it up!','ok')}
+function claimReview(){
+  const t=document.getElementById('reviewText')?.value.trim()||'';
+  if(t.split(' ').length<50){toast('Kam se kam 50 words likhein','err');return}
+  if(!checkTaskLimit('review')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj reviews ki limit ho gayi! (3/3)','err');
+    return;
+  }
+  stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.15,'review');
+  if(ok){
+    addTx('+$0.15','App Review','completed');
+    closeTask();
+    toast('🎉 +$0.15 Review Submit! Shukriya!','ok');
+  }
+}
+function claimAI(){
+  const t=document.getElementById('aiUrls')?.value.trim()||'';
+  if(!t){toast('Image URLs paste karein','err');return}
+  if(!checkTaskLimit('ai')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj AI task ki limit ho gayi! (1/1)','err');
+    return;
+  }
+  stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.10,'ai');
+  if(ok){
+    addTx('+$0.10','AI Image Task','completed');
+    closeTask();
+    toast('🎉 +$0.10 AI Task Complete! Excellent!','ok');
+  }
+}
+function claimData(){
+  if(!checkTaskLimit('data')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj data entry ki limit ho gayi! (2/2)','err');
+    return;
+  }
+  stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.25,'data');
+  if(ok){
+    addTx('+$0.25','Data Entry','completed');
+    closeTask();
+    toast('🎉 +$0.25 Data Entry Complete!','ok');
+  }
+}
+function claimTranslate(){
+  const t=document.getElementById('transText')?.value.trim()||'';
+  if(!t){toast('Translation likho pehle','err');return}
+  if(!checkTaskLimit('translate')){
+    if(!canEarnMore()) showLimitModal();
+    else toast('Aaj translation ki limit ho gayi! (1/1)','err');
+    return;
+  }
+  stats.tasks++;saveStats();
+  const ok=addTaskBalance(0.30,'translate');
+  if(ok){
+    addTx('+$0.30','Translation Work','completed');
+    closeTask();
+    toast('🎉 +$0.30 Translation Submit!','ok');
+  }
+}
+function selWithdraw(el){document.querySelectorAll('.w-method').forEach(m=>m.classList.remove('on'));el.classList.add('on')}
+function submitWithdraw(){
+  const amt=parseFloat(document.getElementById('wAmt')?.value||0);
+  const acc=document.getElementById('wAcc')?.value.trim()||'';
+  const method=document.querySelector('.w-method.on .w-name')?.textContent||'Account';
+  if(amt<5){toast('Minimum $5 withdraw karo','err');return}
+  if(amt>balance){toast('Itne paise nahi hain','err');return}
+  if(!acc){toast('Account number daalo','err');return}
+  const txId='EE-'+Date.now().toString(36).toUpperCase();
+  addTx('-$'+amt.toFixed(2),'Withdrawal via '+method+' → '+acc,'pending',txId);
+  balance-=amt;localStorage.setItem('ee_bal',balance.toFixed(2));updateUI();
+  closeTask();
+  toast(`✅ $${amt} request submit! ID: ${txId}`,'ok');
+}
+
+// ── TRANSACTION HISTORY ──
+let transactions=JSON.parse(localStorage.getItem('ee_txs')||'[]');
+function addTx(amount,desc,status,id){
+  const tx={
+    id:id||'EE-'+Date.now().toString(36).toUpperCase(),
+    amount,desc,status,
+    date:new Date().toLocaleDateString('en-PK',{day:'2-digit',month:'short',year:'numeric'}),
+    time:new Date().toLocaleTimeString('en-PK',{hour:'2-digit',minute:'2-digit'})
+  };
+  transactions.unshift(tx);
+  if(transactions.length>50)transactions.pop();
+  localStorage.setItem(getUserKey()+'_txs', JSON.stringify(transactions));
+}
+function openHistory(){
+  if(!user){toast('Pehle login karo','err');return}
+  const box=document.getElementById('tmodalBox');
+  document.getElementById('taskModal').classList.add('open');
+  const totalEarned=transactions.filter(t=>t.amount.startsWith('+')).reduce((s,t)=>s+parseFloat(t.amount.replace('+$','')),0);
+  const totalWithdrawn=transactions.filter(t=>t.amount.startsWith('-')).reduce((s,t)=>s+parseFloat(t.amount.replace('-$','')),0);
+  const pendingW=transactions.filter(t=>t.status==='pending');
+  box.innerHTML=`
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem">
+      <h3>📊 Transaction History</h3>
+      <button onclick="closeTask()" style="background:none;border:none;font-size:1.25rem;cursor:pointer;color:var(--text3)">✕</button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.75rem;margin-bottom:1.25rem">
+      <div style="background:var(--green3);border-radius:12px;padding:1rem;text-align:center">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--green)">$${totalEarned.toFixed(2)}</div>
+        <div style="font-size:0.65rem;color:var(--green);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem">Total Earned</div>
+      </div>
+      <div style="background:#FEF3C7;border-radius:12px;padding:1rem;text-align:center">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--gold)">$${totalWithdrawn.toFixed(2)}</div>
+        <div style="font-size:0.65rem;color:var(--gold);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem">Withdrawn</div>
+      </div>
+      <div style="background:var(--blue2);border-radius:12px;padding:1rem;text-align:center">
+        <div style="font-size:1.4rem;font-weight:800;color:var(--blue)">$${balance.toFixed(2)}</div>
+        <div style="font-size:0.65rem;color:var(--blue);font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:0.2rem">Available</div>
+      </div>
+    </div>
+    ${pendingW.length?`
+    <div style="background:#FEF3C7;border:1px solid rgba(245,158,11,0.3);border-radius:10px;padding:0.85rem 1rem;margin-bottom:1rem">
+      <div style="font-size:0.78rem;font-weight:700;color:var(--gold);margin-bottom:0.4rem">⏳ Pending Withdrawals</div>
+      ${pendingW.map(t=>`<div style="font-size:0.75rem;color:var(--text2);display:flex;justify-content:space-between;padding:0.3rem 0;border-bottom:1px solid rgba(245,158,11,0.15)"><span>${t.desc}</span><span style="font-weight:700">${t.amount} <span style="color:var(--gold);font-size:0.65rem">● Processing</span></span></div>`).join('')}
+      <div style="font-size:0.68rem;color:var(--text3);margin-top:0.5rem">Processing time: 1-3 business days</div>
+    </div>`:''}
+    <div style="font-size:0.68rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:0.65rem">All Transactions</div>
+    <div style="max-height:320px;overflow-y:auto;display:flex;flex-direction:column;gap:0.4rem">
+      ${transactions.length===0?`<div style="text-align:center;padding:2rem;color:var(--text3);font-size:0.82rem">Abhi koi transaction nahi — tasks karo aur kamao!</div>`:
+      transactions.map(t=>`
+        <div style="display:flex;align-items:center;gap:0.75rem;padding:0.75rem;background:var(--bg);border-radius:10px;border:1px solid var(--border)">
+          <div style="width:36px;height:36px;border-radius:50%;background:${t.amount.startsWith('+')?'var(--green3)':'#FEF3C7'};display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0">${t.amount.startsWith('+')?(t.desc.includes('Video')?'📺':t.desc.includes('Survey')?'📝':t.desc.includes('Caption')?'🖼️':t.desc.includes('Social')?'👍':t.desc.includes('Review')?'⭐':t.desc.includes('AI')?'🎨':t.desc.includes('Data')?'⌨️':'🌍'):'💸'}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-size:0.8rem;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${t.desc}</div>
+            <div style="font-size:0.65rem;color:var(--text3)">${t.date} · ${t.time} · ID: ${t.id}</div>
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div style="font-size:0.88rem;font-weight:800;color:${t.amount.startsWith('+')?'var(--green)':'var(--red)'}">${t.amount}</div>
+            <div style="font-size:0.62rem;font-weight:600;padding:0.1rem 0.45rem;border-radius:100px;background:${t.status==='completed'?'var(--green3)':t.status==='pending'?'#FEF3C7':'#FEE2E2'};color:${t.status==='completed'?'var(--green)':t.status==='pending'?'var(--gold)':'var(--red)'}">
+              ${t.status==='completed'?'✓ Paid':t.status==='pending'?'⏳ Processing':'✕ Failed'}
+            </div>
+          </div>
+        </div>`).join('')}
+    </div>`;
+}
+
+</script>
+</body>
+</html>
