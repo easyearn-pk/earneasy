@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,29 @@
 <title>EarnEasy — Ghar Baithe Halal Kamayi | $90/Month</title>
 <meta name="description" content="Ghar baithe online kaam karo aur $90 per month kamao. Ads dekhna, videos, surveys, data entry, AI tasks aur bohot kuch — bilkul free, bilkul halal.">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- ============================================================
+     AAPKI MONETAG SMARTLINK YAHAN DAALO
+     1. monetag.com pe login karo
+     2. SmartLink section mein jao
+     3. Apni link copy karo aur neeche paste karo
+     ============================================================ -->
+<script>
+  // APNI SMARTLINK YAHAN DAALO — sirf link badlo
+  const SMARTLINK = 'https://YOUR-SMARTLINK-HERE.com'; 
+  // Mithsal: const SMARTLINK = 'https://smart.monetag.com/abc123xyz';
+</script>
+
+<!-- Google Analytics — Visitors track karne ke liye -->
+<!-- Step 1: analytics.google.com pe account banao -->
+<!-- Step 2: G-XXXXXXXXXX ki jagah apna ID daalo -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script> -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -430,22 +454,22 @@ footer p{font-size:0.78rem;line-height:1.7}
   </div>
 </div>
 
-<!-- ADSENSE PLACEHOLDER TOP -->
-<div style="background:#fff;border-bottom:1px solid var(--border);padding:0.5rem 2rem;text-align:center">
-  <div style="font-size:0.65rem;color:var(--text3);margin-bottom:0.25rem;letter-spacing:0.08em;text-transform:uppercase">Advertisement</div>
-  <!-- Replace with your Google AdSense code -->
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script> -->
-  <div style="background:var(--bg);border:1px dashed var(--border2);border-radius:8px;padding:1.5rem;max-width:728px;margin:0 auto;color:var(--text3);font-size:0.78rem">
-    📢 Ad Space — Google AdSense (728×90)
-  </div>
+<!-- MONETAG SMARTLINK BANNER — AAPKI REAL KAMAYI -->
+<div style="background:#fff;border-bottom:1px solid var(--border);padding:0.75rem 2rem;text-align:center">
+  <div style="font-size:0.65rem;color:var(--text3);margin-bottom:0.4rem;letter-spacing:0.08em;text-transform:uppercase">Sponsored</div>
+  <!-- Yahan Monetag ka banner code paste karo -->
+  <!-- monetag.com → Publishers → Ad Formats → Banner → Code copy karo -->
+  <a href="javascript:void(0)" onclick="window.open(SMARTLINK,'_blank')" style="display:inline-block;background:linear-gradient(135deg,#059669,#10B981);color:#fff;padding:0.75rem 2rem;border-radius:10px;text-decoration:none;font-size:0.85rem;font-weight:700;max-width:728px;width:100%;box-sizing:border-box">
+    🎯 Exclusive Offer — Click Karein Aur Dekho! (Sponsored)
+  </a>
 </div>
 
 <!-- HONEST NOTICE -->
 <div style="background:linear-gradient(135deg,#FEF3C7,#ECFDF5);border-bottom:2px solid var(--green);padding:1rem 2rem;text-align:center">
   <p style="font-size:0.85rem;color:var(--text2);font-weight:500">
-    🚧 <strong style="color:var(--green)">Platform Launch Mode:</strong> 
-    Abhi tasks practice ke liye hain. Real payments jald shuru hongi — 
-    <strong>tab tak aap tasks seekhein aur tayyar rahein!</strong>
+    ✅ <strong style="color:var(--green)">Kaise Kaam Karta Hai:</strong> 
+    Har task complete karo → SmartLink pe click hoga → Aapko advertiser se paisa milega.
+    <strong>Jitne zyada users tasks karein, utna aapko aur unhe dono ko faida!</strong>
     <a href="#faq" style="color:var(--green);margin-left:0.5rem">Aur Jaanein →</a>
   </p>
 </div>
@@ -1307,6 +1331,8 @@ function claimVideo(){
     else toast('Aaj videos ki limit ho gayi! (20/20)','err');
     return;
   }
+  // SmartLink kholo — yahan se AAPKO paise milte hain (Monetag se)
+  window.open(SMARTLINK, '_blank');
   stats.vids++;saveStats();
   const ok=addTaskBalance(0.01,'video');
   if(ok){
@@ -1322,6 +1348,8 @@ function claimSurvey(){
     else toast('Aaj surveys ki limit ho gayi! (3/3)','err');
     return;
   }
+  // SmartLink kholo — aapki asli kamayi yahan se hoti hai
+  window.open(SMARTLINK, '_blank');
   stats.survs++;stats.tasks++;saveStats();
   const ok=addTaskBalance(0.25,'survey');
   if(ok){
@@ -1338,6 +1366,7 @@ function claimCaption(){
     else toast('Aaj captions ki limit ho gayi! (5/5)','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   stats.tasks++;saveStats();
   const ok=addTaskBalance(0.10,'caption');
   if(ok){
@@ -1353,6 +1382,7 @@ function completeAction(btn){
     else toast('Aaj social tasks ki limit ho gayi!','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   btn.disabled=true;btn.textContent='✓ Done';btn.style.background='#ccc';
   actionsDoneCount++;
   const ad=document.getElementById('actionsDone');
@@ -1372,6 +1402,7 @@ function claimReview(){
     else toast('Aaj reviews ki limit ho gayi! (3/3)','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   stats.tasks++;saveStats();
   const ok=addTaskBalance(0.15,'review');
   if(ok){
@@ -1388,6 +1419,7 @@ function claimAI(){
     else toast('Aaj AI task ki limit ho gayi! (1/1)','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   stats.tasks++;saveStats();
   const ok=addTaskBalance(0.10,'ai');
   if(ok){
@@ -1402,6 +1434,7 @@ function claimData(){
     else toast('Aaj data entry ki limit ho gayi! (2/2)','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   stats.tasks++;saveStats();
   const ok=addTaskBalance(0.25,'data');
   if(ok){
@@ -1418,6 +1451,7 @@ function claimTranslate(){
     else toast('Aaj translation ki limit ho gayi! (1/1)','err');
     return;
   }
+  window.open(SMARTLINK, '_blank');
   stats.tasks++;saveStats();
   const ok=addTaskBalance(0.30,'translate');
   if(ok){
